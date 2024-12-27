@@ -35,9 +35,7 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-emoji" },
     ---@param opts cmp.ConfigSchema
-    opts = function(_, opts)
-      table.insert(opts.sources, { name = "emoji" })
-    end,
+    opts = function(_, opts) table.insert(opts.sources, { name = "emoji" }) end,
   },
 
   -- change some telescope options and a keymap to browse plugin files
@@ -158,9 +156,7 @@ return {
     event = "VeryLazy",
     opts = function(_, opts)
       table.insert(opts.sections.lualine_x, {
-        function()
-          return "😄"
-        end,
+        function() return "😄" end,
       })
     end,
   },
